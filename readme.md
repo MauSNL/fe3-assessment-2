@@ -33,13 +33,13 @@ var header = doc.indexOf('"Subjects_1";"Country of residence";"Periods";"Regions
 ```
 Je houdt dan alleen nog maar de bruikbare elementen over en negeert alles wat overbodig is.
 
-Voor de interactie heb ik gekeken naar het [voorbeeld] wat stond in de slides en heb ik de [opdracht Interactivity] gebruikt.
+Voor de interactie heb ik gekeken naar het [voorbeeld] wat stond in de slides en heb ik de [opdracht Interactivity] gebruikt. Ook heeft een medestudent me geholpen met de interactie. Deze student heet Dorus ten Haaf.
 
 ```
-        // Edited from https://cmda-fe3.github.io/course-17-18/class-4/tip/
+        // Edited from https://cmda-fe3.github.io/course-17-18/class-4/tip/ en geholpen door Dorus ten Haaf: https://github.com/dorusth/fe3-assessment-2
     d3.select("input").on("change", onChange);
 
-    var sortTimeout = setTimeout(function() {
+    var sortTimeout = setTimeout(function() { // Controleerd of het hokje gechecked is.
         d3.select("input").property("checked", false).each(onChange);
     }, 0);
 
@@ -57,16 +57,16 @@ Voor de interactie heb ik gekeken naar het [voorbeeld] wat stond in de slides en
         })).copy();
 
 
-        svg.selectAll(".bar").sort(function(a, b) {
+        svg.selectAll(".bar").sort(function(a, b) { // selecteerd all bars en sorteerd ze.
             return x0(a.year) - x0(b.year);
         });
 
-        var transition = svg.transition().duration(750),
+        var transition = svg.transition().duration(750), // specificeerd de animatie.
             delay = function(d, i) {
                 return i * 0;
             };
 
-        transition.selectAll(".bar").delay(delay).attr("x", function(d) { // Animeerd de bar elementen.
+        transition.selectAll(".bar").delay(delay).attr("x", function(d) { // Voegt de animatie toe aan de bar elementen.
             return x0(d.year);
         });
 
