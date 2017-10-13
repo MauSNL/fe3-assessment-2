@@ -1,12 +1,12 @@
 var svg = d3.select("svg"), // Geeft de SVG vorm.
     margin = {
-        top: 20,
+        top: 20,      // Geeft waarde aan margin.
         right: 20,
         bottom: 30,
         left: 40
     },
-    width = +svg.attr("width") - margin.left - margin.right,
-    height = +svg.attr("height") - margin.top - margin.bottom;
+    width = +svg.attr("width") - margin.left - margin.right, // Stelt de waardes van margin left en right in als de width.
+    height = +svg.attr("height") - margin.top - margin.bottom; // Stelt de waardes van margin top en bottom in als de height.
 
 var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
     y = d3.scaleLinear().rangeRound([height, 0]);
@@ -21,8 +21,8 @@ function onload(err, doc) {
     if (err) throw err;
 
     var header = doc.indexOf('"Subjects_1";"Country of residence";"Periods";"Regions";"Nederland"') //haalt alles uit de .csv tot de data.
-    var end = doc.indexOf('\n', header)
-    doc = doc.slice(end).trim()
+    var end = doc.indexOf('\n', header) // Stopt de header en alle enters in 1 element.
+    doc = doc.slice(end).trim() // Haalt alle elementen in de variable "end" weg.
 
     var data = d3.csvParseRows(doc, map)
     data.pop() // Haalt het laatste object uit de array.
@@ -40,6 +40,7 @@ function onload(err, doc) {
     x.domain(data.map(function(d) {
         return d.year;
     }));
+
     y.domain([0, d3.max(data, function(d) {
         return d.value;
     })]);
@@ -63,7 +64,6 @@ function onload(err, doc) {
         .data(data)
         .enter().append("rect")
         .attr("class", "bar")
-        .attr("fill", "goldenrod")
         .attr("x", function(d) {
             return x(d.year);
         })
@@ -74,7 +74,7 @@ function onload(err, doc) {
         .attr("height", function(d) {
             return height - y(d.value);
         });
-
+        // Edited from https://cmda-fe3.github.io/course-17-18/class-4/tip/
     d3.select("input").on("change", onChange);
 
     var sortTimeout = setTimeout(function() {
