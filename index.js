@@ -1,3 +1,4 @@
+// Based on: https://bl.ocks.org/mbostock/3885304 by Mike Bostock
 var svg = d3.select("svg"), // Geeft de SVG vorm.
     margin = {
         top: 20,      // Geeft waarde aan margin.
