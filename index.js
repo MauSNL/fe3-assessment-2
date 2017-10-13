@@ -74,7 +74,7 @@ function onload(err, doc) {
         .attr("height", function(d) {
             return height - y(d.value);
         });
-        // Edited from https://cmda-fe3.github.io/course-17-18/class-4/tip/
+        // Edited from https://cmda-fe3.github.io/course-17-18/class-4/tip/ en geholpen door Dorus ten Haaf: https://github.com/dorusth/fe3-assessment-2
     d3.select("input").on("change", onChange);
 
     var sortTimeout = setTimeout(function() {
