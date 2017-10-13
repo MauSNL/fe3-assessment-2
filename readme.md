@@ -35,6 +35,45 @@ Je houdt dan alleen nog maar de bruikbare elementen over en negeert alles wat ov
 
 Voor de inter actie heb ik gekeken naar het [voorbeeld] wat stond in de slides en heb ik de [opdracht Interactivity] gebruikt.
 
+```
+        // Edited from https://cmda-fe3.github.io/course-17-18/class-4/tip/
+    d3.select("input").on("change", onChange);
+
+    var sortTimeout = setTimeout(function() {
+        d3.select("input").property("checked", false).each(onChange);
+    }, 0);
+
+    function onChange() {
+        clearTimeout(sortTimeout);
+        var x0 = x.domain(data.sort(this.checked ?
+
+            function(a, b) { // Als het hokje gechecked is dat wordt de data gesorteerd.
+                return b.value - a.value;
+            } :
+            function(a, b) {
+                return d3.ascending(a.year, b.year);
+            }).map(function(d) {
+            return d.year;
+        })).copy();
+
+
+        svg.selectAll(".bar").sort(function(a, b) {
+            return x0(a.year) - x0(b.year);
+        });
+
+        var transition = svg.transition().duration(750),
+            delay = function(d, i) {
+                return i * 0;
+            };
+
+        transition.selectAll(".bar").delay(delay).attr("x", function(d) { // Animeerd de bar elementen.
+            return x0(d.year);
+        });
+
+        transition.select(".axis--x").call(d3.axisBottom(x)).selectAll("g").delay(delay); // The assen worden gesorteerd aan de hand van de data.
+    }
+```
+
 ---------------------------------------------------------------------------------------------------------------------------
 
 ## License
