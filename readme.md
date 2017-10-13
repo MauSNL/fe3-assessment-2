@@ -9,7 +9,7 @@ Edit the **description** and **url** of your repository.  Click on edit above
 the green Clone or download button and fill in a correct description and use the
 `github.io` URL you just set up.
 
-## Proces
+## Process
 
 Voor mijn tweede assessment heb ik de volgende [dataset] gebruikt. De data heb ik vereenvoudigd en vervolgens opgeschoond.
 
