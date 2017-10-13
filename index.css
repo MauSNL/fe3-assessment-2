@@ -1,0 +1,22 @@
+body {
+    background: url("./bg.jpg");
+    font-family: Verdana;
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+	display: inline;
+}
+
+.bar {
+  fill: goldenrod;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis--x path {
+  display: none;
+}
