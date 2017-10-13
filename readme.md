@@ -78,11 +78,11 @@ Voor de inter actie heb ik gekeken naar het [voorbeeld] wat stond in de slides e
 
 ## License
 
-dataset: http://statline.cbs.nl/Statweb/publication/?DM=SLEN&PA=82061eng&D1=0&D2=1&D3=0&D4=16,33,50,67,84&LA=EN&HDR=G2&STB=T,G1,G3&VW=T
+Dataset: http://statline.cbs.nl/Statweb/publication/?DM=SLEN&PA=82061eng&D1=0&D2=1&D3=0&D4=16,33,50,67,84&LA=EN&HDR=G2&STB=T,G1,G3&VW=T
 
-voorbeeld: https://cmda-fe3.github.io/course-17-18/class-4/sort/
+Voorbeeld: https://cmda-fe3.github.io/course-17-18/class-4/sort/
 
-opdracht Interactivity: https://github.com/cmda-fe3/course-17-18/blob/master/class-4.md
+Opdracht Interactivity: https://github.com/cmda-fe3/course-17-18/blob/master/class-4.md
 
 ---------------------------------------------------------------------------------------------------------------------------
 [dataset]: http://statline.cbs.nl/Statweb/publication/?DM=SLEN&PA=82061eng&D1=0&D2=1&D3=0&D4=16,33,50,67,84&LA=EN&HDR=G2&STB=T,G1,G3&VW=T
