@@ -33,7 +33,7 @@ var header = doc.indexOf('"Subjects_1";"Country of residence";"Periods";"Regions
 ```
 Je houdt dan alleen nog maar de bruikbare elementen over en negeert alles wat overbodig is.
 
-Voor de inter actie heb ik gekeken naar het [voorbeeld] wat stond in de slides en heb ik de [opdracht Interactivity] gebruikt.
+Voor de interactie heb ik gekeken naar het [voorbeeld] wat stond in de slides en heb ik de [opdracht Interactivity] gebruikt.
 
 ```
         // Edited from https://cmda-fe3.github.io/course-17-18/class-4/tip/
