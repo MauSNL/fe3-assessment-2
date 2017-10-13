@@ -78,6 +78,8 @@ Voor de interactie heb ik gekeken naar het [voorbeeld] wat stond in de slides en
 
 ## License
 
+Original: https://bl.ocks.org/mbostock/3885304
+
 Dataset: http://statline.cbs.nl/Statweb/publication/?DM=SLEN&PA=82061eng&D1=0&D2=1&D3=0&D4=16,33,50,67,84&LA=EN&HDR=G2&STB=T,G1,G3&VW=T
 
 Voorbeeld: https://cmda-fe3.github.io/course-17-18/class-4/sort/
